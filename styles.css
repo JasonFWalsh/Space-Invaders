@@ -2,11 +2,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     background-color: black;
     margin: 0;
 }
 
 canvas {
     border: 1px solid white;
+    width: 100%; /* Full width of the body */
+    max-width: 800px; /* Set a maximum width for the canvas */
+    height: auto; /* Maintain aspect ratio */
 }
