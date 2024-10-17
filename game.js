@@ -28,6 +28,28 @@ const bulletSound = new Audio('laser.wav');
 const explosionSound = new Audio('explosion.wav');
 const gameOverSound = new Audio('gameover.wav');
 
+// Reference to the start button
+const startGameBtn = document.getElementById('startGameBtn');
+
+// When the button is clicked, start the game and play the music
+startGameBtn.addEventListener('click', function() {
+  backgroundMusic.play();  // Play background music
+  backgroundMusic.volume = 0.5;  // Set the volume as needed
+  backgroundMusic.loop = true;   // Loop the music
+
+  // Start the game
+  startGame();
+  
+  // Hide the start button after the game starts
+  startGameBtn.style.display = 'none';
+});
+
+// Update your existing game start logic if needed
+function startGame() {
+  // Game initialization logic here...
+  update();  // Start the game loop
+}
+
 // Variables
 let playerX = 370;
 let playerY = 480;
